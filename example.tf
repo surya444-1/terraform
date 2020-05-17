@@ -1,5 +1,5 @@
-# create a dynamodb table for locking the state file
-resource "aws_dynamodb_table" "dynamodb-terraform-state-lock-trail" {
+
+resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
   name = "terraform-state-lock-dynamodb"
   hash_key = "LockID"
   read_capacity = 20
@@ -10,7 +10,7 @@ resource "aws_dynamodb_table" "dynamodb-terraform-state-lock-trail" {
     type = "S"
   }
  
-  tags {
-    Name = "DynamoDB Terraform State Lock Table"
+  tags = {
+    Name = "DynamoDB-Terraform-State-Lock-Table"
   }
 }

@@ -47,7 +47,7 @@ terraform {
  bucket = "s3backend-surya"
  dynamodb_table = "terraform-state-lock-dynamodb"
  region = "us-east-1"
- key = testfile.tf
+ key = "statefile.tf"
  }
 }
 
